@@ -147,6 +147,7 @@ being contributed.
 %doc %{_texmfdistdir}/source/latex/prosper/prosper.png
 %doc %{_texmfdistdir}/source/latex/prosper/prosper.ui
 %doc %{_texmfdistdir}/source/latex/prosper/seminar-bg2-lepennec.fix
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -157,3 +158,5 @@ being contributed.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
