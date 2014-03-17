@@ -1,19 +1,18 @@
-# revision 15878
+# revision 33033
 # category Package
 # catalog-ctan /macros/latex/contrib/prosper
-# catalog-date 2010-05-17 14:53:01 +0200
+# catalog-date 2012-02-25 10:31:12 +0100
 # catalog-license lppl1.2
 # catalog-version 1.0h
 Name:		texlive-prosper
 Version:	1.0h
-Release:	6
+Release:	7
 Summary:	LaTeX class for high quality slides
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/prosper
 License:	LPPL1.2
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/prosper.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/prosper.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/prosper.source.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -96,6 +95,8 @@ being contributed.
 %{_texmfdistdir}/tex/latex/prosper/yellow-bullet-on-blue-wc.ps
 %{_texmfdistdir}/tex/latex/prosper/yellow-bullet-on-blue.ps
 %{_texmfdistdir}/tex/latex/prosper/yellow-bullet-on-white.ps
+%doc %{_texmfdistdir}/doc/latex/prosper/AUTHORS
+%doc %{_texmfdistdir}/doc/latex/prosper/ChangeLog
 %doc %{_texmfdistdir}/doc/latex/prosper/Example.tex
 %doc %{_texmfdistdir}/doc/latex/prosper/ExampleAlienglow.tex
 %doc %{_texmfdistdir}/doc/latex/prosper/ExampleAutumn.tex
@@ -107,8 +108,11 @@ being contributed.
 %doc %{_texmfdistdir}/doc/latex/prosper/ExampleNuanceGris.tex
 %doc %{_texmfdistdir}/doc/latex/prosper/ExampleTroisPoints.tex
 %doc %{_texmfdistdir}/doc/latex/prosper/FAQ
+%doc %{_texmfdistdir}/doc/latex/prosper/INSTALL
 %doc %{_texmfdistdir}/doc/latex/prosper/NEWS
 %doc %{_texmfdistdir}/doc/latex/prosper/README
+%doc %{_texmfdistdir}/doc/latex/prosper/TODO
+%doc %{_texmfdistdir}/doc/latex/prosper/compilation.fig
 %doc %{_texmfdistdir}/doc/latex/prosper/green-bullet-on-blue-wc.gif
 %doc %{_texmfdistdir}/doc/latex/prosper/green-bullet-on-blue.gif
 %doc %{_texmfdistdir}/doc/latex/prosper/green-bullet-on-white.gif
@@ -116,48 +120,28 @@ being contributed.
 %doc %{_texmfdistdir}/doc/latex/prosper/manifest.txt
 %doc %{_texmfdistdir}/doc/latex/prosper/prosper-doc.pdf
 %doc %{_texmfdistdir}/doc/latex/prosper/prosper-doc.tex
+%doc %{_texmfdistdir}/doc/latex/prosper/prosper-structure.fig
 %doc %{_texmfdistdir}/doc/latex/prosper/prosper-template.jpg
 %doc %{_texmfdistdir}/doc/latex/prosper/prosper-tour.pdf
 %doc %{_texmfdistdir}/doc/latex/prosper/prosper-tour.tex
+%doc %{_texmfdistdir}/doc/latex/prosper/prosper.png
+%doc %{_texmfdistdir}/doc/latex/prosper/prosper.ui
 %doc %{_texmfdistdir}/doc/latex/prosper/red-bullet-on-blue-wc.gif
 %doc %{_texmfdistdir}/doc/latex/prosper/red-bullet-on-blue.gif
 %doc %{_texmfdistdir}/doc/latex/prosper/red-bullet-on-white.gif
 %doc %{_texmfdistdir}/doc/latex/prosper/rico.tex
 %doc %{_texmfdistdir}/doc/latex/prosper/rotation.tex
+%doc %{_texmfdistdir}/doc/latex/prosper/seminar-bg2-lepennec.fix
 %doc %{_texmfdistdir}/doc/latex/prosper/yellow-bullet-on-blue-wc.gif
 %doc %{_texmfdistdir}/doc/latex/prosper/yellow-bullet-on-blue.gif
 %doc %{_texmfdistdir}/doc/latex/prosper/yellow-bullet-on-white.gif
-#- source
-%doc %{_texmfdistdir}/source/latex/prosper/AUTHORS
-%doc %{_texmfdistdir}/source/latex/prosper/ChangeLog
-%doc %{_texmfdistdir}/source/latex/prosper/INSTALL
-%doc %{_texmfdistdir}/source/latex/prosper/TODO
-%doc %{_texmfdistdir}/source/latex/prosper/compilation.fig
-%doc %{_texmfdistdir}/source/latex/prosper/prosper-structure.fig
-%doc %{_texmfdistdir}/source/latex/prosper/prosper.png
-%doc %{_texmfdistdir}/source/latex/prosper/prosper.ui
-%doc %{_texmfdistdir}/source/latex/prosper/seminar-bg2-lepennec.fix
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a0 -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
-cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.0h-2
-+ Revision: 755137
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.0h-1
-+ Revision: 719310
-- texlive-prosper
-- texlive-prosper
-- texlive-prosper
-- texlive-prosper
-
+cp -fpar tex doc %{buildroot}%{_texmfdistdir}
