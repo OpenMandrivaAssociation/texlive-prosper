@@ -6,7 +6,7 @@
 # catalog-version 1.0h
 Name:		texlive-prosper
 Version:	1.0h
-Release:	11
+Release:	12
 Summary:	LaTeX class for high quality slides
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/prosper
