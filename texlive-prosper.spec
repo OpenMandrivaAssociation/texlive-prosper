@@ -1,18 +1,12 @@
-# revision 33033
-# category Package
-# catalog-ctan /macros/latex/contrib/prosper
-# catalog-date 2012-02-25 10:31:12 +0100
-# catalog-license lppl1.2
-# catalog-version 1.0h
 Name:		texlive-prosper
-Version:	1.0h
-Release:	13
+Version:	33033
+Release:	1
 Summary:	LaTeX class for high quality slides
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/prosper
 License:	LPPL1.2
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/prosper.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/prosper.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/prosper.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/prosper.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -30,12 +24,12 @@ supported (including some that mimic PowerPoint) and others are
 being contributed.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -138,7 +132,7 @@ being contributed.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
