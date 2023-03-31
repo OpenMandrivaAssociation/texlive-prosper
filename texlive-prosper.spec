@@ -1,6 +1,6 @@
 Name:		texlive-prosper
 Version:	33033
-Release:	1
+Release:	2
 Summary:	LaTeX class for high quality slides
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/prosper
