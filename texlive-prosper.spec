@@ -3,7 +3,7 @@ Version:	33033
 Release:	2
 Summary:	LaTeX class for high quality slides
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/prosper
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/prosper
 License:	LPPL1.2
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/prosper.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/prosper.doc.r%{version}.tar.xz
